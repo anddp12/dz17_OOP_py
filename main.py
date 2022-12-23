@@ -28,4 +28,22 @@ p1 = Person()
 # p1.setwallet(10)
 # p1.getwallet()
 p1.wallet = 100
-print(p1.wallet)
+# print(p1.wallet)
+
+
+class Pay:
+    wallet = Person()
+    def __init__(self, money_pay) -> None:
+        self.money_pay = money_pay
+
+    def pay(self):
+        if self.wallet >= self.money_pay:
+            return self.wallet - self.money_pay
+        else:
+            print("Не достаточно средств")
+
+p1 = Pay(100)
+p1.wallet = 500
+print(p1.pay())
+p1.wallet = 50
+print(p1.pay())
