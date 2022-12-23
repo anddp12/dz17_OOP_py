@@ -40,10 +40,10 @@ class Pay:
         if self.wallet >= self.money_pay:
             return self.wallet - self.money_pay
         else:
-            print("Не достаточно средств")
+            print("Не достаточно средств в кошельке")
 
 p1 = Pay(100)
 p1.wallet = 500
-print(p1.pay())
+print(f"Остаток в кошельке: {p1.pay()} $")
 p1.wallet = 50
 print(p1.pay())
